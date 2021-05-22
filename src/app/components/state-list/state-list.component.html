@@ -1,1 +1,9 @@
-<p>state-list works!</p>
+<div class="container">
+
+  <app-state
+    *ngFor="let state of dataSource"
+    [dataSource]="state"
+  >
+  </app-state>
+
+</div>

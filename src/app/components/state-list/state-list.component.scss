@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  app-state {
+    flex-basis: 275px;
+    flex-grow: 1;
+    margin: 16px;
+  }
+
+}
