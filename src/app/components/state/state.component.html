@@ -1,11 +1,12 @@
+<h1>{{ dataSource.state }}</h1>
+
 <table>
   <tr>
     <th *ngFor="let name of columnNames">{{ name }}</th>
   </tr>
-  <tr *ngFor="let record of dataSource">
+  <tr *ngFor="let record of dataSource.cities">
     <td>{{record.id}}</td>
     <td>{{record.city}}</td>
-    <td>{{record.population}}</td>
-    <td>{{record.state}}</td>
+    <td>{{record.population | number}}</td>
   </tr>
 </table>

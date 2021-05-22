@@ -3,15 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TabularDataComponent } from './components/tabular-data/tabular-data.component';
+import { StateComponent } from './components/state/state.component';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { StateListComponent } from './components/state-list/state-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TabularDataComponent
+    StateComponent,
+    StateListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService, IPopulationEntry } from './services/data.service';
+import { DataService } from './services/data.service';
 import { Observable } from 'rxjs';
+import { StateStats } from './shared/population.model';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
 
-  datasource: IPopulationEntry[];
+  dataSource: StateStats[];
 
   constructor(private dataService: DataService) {}
 
@@ -18,7 +19,7 @@ export class AppComponent implements OnInit {
   }
 
   getData(): void {
-    this.datasource = this.dataService.getPopulationData();
+    this.dataSource = this.dataService.getPopulationData();
   }
 
 }
