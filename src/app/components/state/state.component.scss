@@ -6,38 +6,54 @@ table {
   box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),
               0 8px 10px 1px rgba(0,0,0,.14),
               0 3px 14px 2px rgba(0,0,0,.12);
+
+  // To properly have round corners
+  overflow: hidden;
+
   tr {
     height: 56px;
 
+    &:nth-child(odd) {
+      background-color: rgba(63, 81, 181, 0.08);
+    }
+
     &:hover {
-      background-color: rgba(63, 81, 181, 0.165);
-      th {
-        background-color: white;
+      background-color: rgba(255, 234, 0, 0.5);
+      td {
+        font-weight: 800;
+        font-size: 16px;
       }
+
     }
 
     th, td {
       padding: 0;
       border-bottom: 1px solid rgba(0,0,0,.12);
       color: rgba(0,0,0,.54);
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 500;
       text-align: left;
       width: 40%;
     }
 
+    th {
+      background: #3f51b5;
+      color: white;
+    }
+
     th:first-of-type, td:first-of-type {
       padding-left: 24px;
       width: 20%;
+      // border-radius: 8px 0 0 0;
     }
 
     th:last-of-type, td:last-of-type {
       padding-right: 24px;
+      // border-radius: 0 8px 0 0;
     }
 
     td {
       color: rgba(0,0,0,.87);
-      font-size: 14px;
       font-weight: 400;
     }
 
