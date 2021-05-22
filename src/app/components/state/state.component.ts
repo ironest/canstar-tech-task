@@ -9,6 +9,6 @@ import { StateStats } from 'src/app/shared/population.model';
 export class StateComponent {
 
   @Input() dataSource: StateStats;
-  columnNames: string[] = ['id', 'city', 'population'];
+  columnNames: string[] = ['Id', 'City', 'Population'];
 
 }
