@@ -1,12 +1,6 @@
 import { Injectable } from '@angular/core';
 import { fakeData } from '../data/fake-data';
-
-export interface IPopulationEntry {
-  id: number;
-  city: string;
-  population: number;
-  state: string;
-}
+import { StateStats } from '../shared/population.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +9,7 @@ export class DataService {
 
   constructor() { }
 
-  getPopulationData(): IPopulationEntry[] {
+  getPopulationData(): StateStats[] {
     return fakeData;
   }
 
