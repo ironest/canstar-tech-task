@@ -17,7 +17,7 @@ Build a web-page in Angular that has all of these elements (Table, Module, Servi
   Since no routing requested and one single “feature”, there is only the default app module.
 
 * ### Services
-  A data.service (that acts as if there was an API to call) is being injected into my state-list component
+  A data.service (that consumes an API) is being injected into state-list component
 * ### Components
   * app-component (default)
   * app-state-list (collects data from the service and shows multiple children components)
