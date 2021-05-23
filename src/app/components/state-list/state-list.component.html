@@ -1,9 +1,20 @@
 <div class="container">
 
-  <app-state
-    *ngFor="let state of dataSource"
-    [dataSource]="state"
-  >
-  </app-state>
+  <div
+    class="content"
+    *ngIf="dataSource$ | async as dataSource; else loading">
+    <app-state
+      *ngFor="let state of dataSource"
+      [dataSource]="state"
+    >
+    </app-state>
+  </div>
+
+  <ng-template #loading>
+    <mat-spinner
+      strokeWidth="12" [diameter]="150"
+    >
+    </mat-spinner>
+  </ng-template>
 
 </div>

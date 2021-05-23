@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, throwError } from 'rxjs';
 import { DataService } from '../../services/data.service';
 import { StateStats } from '../../shared/population.model';
 
@@ -9,7 +10,7 @@ import { StateStats } from '../../shared/population.model';
 })
 export class StateListComponent implements OnInit {
 
-  dataSource: StateStats[];
+  dataSource$: Observable<StateStats[]>;
 
   // Injecting the service
   constructor(private dataService: DataService) { }
@@ -19,7 +20,7 @@ export class StateListComponent implements OnInit {
   }
 
   getData(): void {
-    this.dataSource = this.dataService.getPopulationData();
+    this.dataSource$ = this.dataService.getPopulationData();
   }
 
 }
