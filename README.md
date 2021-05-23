@@ -2,26 +2,45 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
 
-## Development server
+## Task Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Build a web-page in Angular that has all of these elements (Table, Module, Service, Component(s), data population, cool CSS element) 
 
-## Code scaffolding
+* ### Repository
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  https://github.com/ironest/canstar-tech-task
 
-## Build
+* ### Table
+  I originally used Angular Material Tables but later on I tought I should have demonstrated how to use directives (ngIf, ngFor) so I went back to normal plain tables
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* ### Module
+  Since no routing requested and one single “feature”, there is only the default app module.
 
-## Running unit tests
+* ### Services
+  A data.service (that acts as if there was an API to call) is being injected into my state-list component
+* ### Components
+  * app-component (default)
+  * app-state-list (collects data from the service and shows multiple children components)
+  * app-state (showing a table)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* ### Data Population
+  I created my own data on a different repo and exposed it here: 
+  
+  http://my-json-server.typicode.com/ironest/canstar-tech-task-api/entries
+  
+  This data is consumed by the `data.service` using HttpClient
 
-## Running end-to-end tests
+* ### Cool CSS element
+  I am not sure what could have been considered “cool”, so I decided to cover different aspects of my layout by demoing:
+  * Import an external UI component library (Material)
+    * Manual styling plain tables to
+    * Replicate some of the real Material Table styles
+    * Adding personal touch of coloring
+  * Interactive row hovering
+  * Flexbox styling to make the UI adapting and fully responsive (desktop / tablet / smartphones)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## To review the submission
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* Clone locally the repository
+* Run `ng serve`
+* Navigate to `http://localhost:4200/`
