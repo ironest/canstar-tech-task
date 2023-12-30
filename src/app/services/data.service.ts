@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, retry } from 'rxjs/operators';
 
-const API_URL = 'http://my-json-server.typicode.com/ironest/canstar-tech-task-api/entries';
+const API_URL = '/assets/data.json';
 
 @Injectable({
   providedIn: 'root'
